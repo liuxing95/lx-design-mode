@@ -32,6 +32,7 @@ class Factory extends AbstractFactory {
 
 /** 抽象产品类 */
 class AbstractProduct{
+  kind: string
   constructor() {
     if (new.target === AbstractProduct) 
         throw new Error('抽象类不能直接实例化!')
@@ -45,6 +46,7 @@ class AbstractProduct{
 
 /* 具体产品类1 */
 class Product1 extends AbstractProduct {
+  type: string
   constructor() {
       super()
       this.type = 'Product1'
@@ -54,6 +56,7 @@ class Product1 extends AbstractProduct {
 }
 /* 具体产品类2 */
 class Product2 extends AbstractProduct {
+  type: string
   constructor() {
       super()
       this.type = 'Product2'
